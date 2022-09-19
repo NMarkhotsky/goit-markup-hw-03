@@ -13,25 +13,12 @@
 }
 
 body {
-  background-color: var(--main-bgd-color);
-  color: var(--main-color);
-
   font-family: var(--main-font);
   font-size: 14px;
-}
 
-/* h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-} */
+  background-color: var(--main-bgd-color);
+  color: var(--main-color);
+}
 
 .link {
   text-decoration: none;
@@ -47,13 +34,15 @@ ul {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  /* outline: 2px solid tomato; */
+  /* outline: 1px solid tomato; */
 }
 
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+
+/* Прихований заголовок */
 
 .visually-hidden {
   position: absolute;
@@ -87,12 +76,12 @@ ul {
   padding-top: 24px;
   padding-bottom: 25px;
 
-  color: var(--accent-color);
-
   font-family: var(--accent-font);
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+
+  color: var(--accent-color);
 }
 
 .studio {
@@ -141,20 +130,20 @@ ul {
   color: var(--accent-color);
 }
 
-/* .nav-item + .nav-item {
-  margin-left: 50px;
-} */
-
-.nav-item:not(:first-child) {
+.nav-item + .nav-item {
   margin-left: 50px;
 }
+
+/* .nav-item:not(:first-child) {
+  margin-left: 50px;
+} */
 
 /* Герой */
 
 .hero {
-  background-color: var(--footer-bgd-color); /* Тимчасовий фон */
-
   text-align: center;
+
+  background-color: var(--footer-bgd-color); /* Тимчасовий фон */
 }
 
 .hero-title {
@@ -176,15 +165,15 @@ ul {
   border: 0;
   padding: 10px 32px;
 
-  background-color: var(--accent-color);
-  color: var(--main-bgd-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
+
+  background-color: var(--accent-color);
+  color: var(--main-bgd-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   cursor: pointer;
 }
@@ -219,10 +208,10 @@ ul {
   margin: 0;
   padding: 0;
 
-  color: var(--primary-color);
-
   line-height: 1.71;
   letter-spacing: 0.03em;
+
+  color: var(--primary-color);
 }
 
 /* Чим ми займаємося */
@@ -243,6 +232,10 @@ ul {
   padding: 0;
 }
 
+.work-img {
+  display: block;
+}
+
 /* Наша команда */
 
 .team {
@@ -260,10 +253,11 @@ ul {
 .team-list .item {
   text-align: center;
 
-  background-color: var(--main-bgd-color);
+  border-radius: 0px 0px 4px 4px;
+
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
+  background-color: var(--main-bgd-color);
 }
 
 .team-img {
@@ -282,18 +276,20 @@ ul {
 .team-text {
   margin-top: 0;
   margin-bottom: 30px;
-  color: var(--primary-color);
 
   font-size: 16px;
   letter-spacing: 0.03em;
+
+  color: var(--primary-color);
 }
 
 /* Футер */
 
 .footer {
-  background-color: var(--footer-bgd-color);
   padding-top: 60px;
   padding-bottom: 60px;
+
+  background-color: var(--footer-bgd-color);
 }
 
 .logo > .studio-footer {
@@ -344,21 +340,18 @@ ul {
   padding-left: 0;
 }
 
-.btn-item:not(:first-child) {
-  margin-left: 8px;
-}
-
-/* .btn-item + .btn-item {
+/* .btn-item:not(:first-child) {
   margin-left: 8px;
 } */
+
+.btn-item + .btn-item {
+  margin-left: 8px;
+}
 
 .filter-btn {
   padding: 6px 22px;
   border-radius: 4px;
   border: none;
-
-  background-color: var(--secondary-bgd-color);
-  color: var(--main-color);
 
   font-family: inherit;
   font-weight: 500;
@@ -366,6 +359,9 @@ ul {
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
+
+  background-color: var(--secondary-bgd-color);
+  color: var(--main-color);
 
   cursor: pointer;
 }
@@ -382,16 +378,38 @@ ul {
 }
 
 /* Проєкти */
+
 .project-list {
   display: flex;
   flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+  margin-bottom: 0;
+  padding: 0;
 }
 
 .project-item {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-top: 30px;
+  margin-left: 30px;
+}
 
+.project-card {
+  padding: 20px 24px;
+
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.project-img {
+  display: block;
 }
 
 .project-title {
+  margin-top: 0;
+  margin-bottom: 4px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -399,10 +417,12 @@ ul {
 }
 
 .project-text {
-  color: var(--primary-color);
+  margin-top: 0;
+  margin-bottom: 0;
 
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
+
+  color: var(--primary-color);
 }
