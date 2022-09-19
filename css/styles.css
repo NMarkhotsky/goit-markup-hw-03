@@ -20,6 +20,19 @@ body {
   font-size: 14px;
 }
 
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+} */
+
 .link {
   text-decoration: none;
 }
@@ -42,9 +55,24 @@ body {
   padding-bottom: 94px;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* Шапка */
 
 .page-header {
+  border: 1px solid #ececec;
 }
 
 .navigation {
@@ -113,8 +141,11 @@ body {
   color: var(--accent-color);
 }
 
-/* ---- */
-.nav-item + .nav-item {
+/* .nav-item + .nav-item {
+  margin-left: 50px;
+} */
+
+.nav-item:not(:first-child) {
   margin-left: 50px;
 }
 
@@ -163,10 +194,6 @@ body {
 }
 
 /* Особливості */
-
-.none-title {
-  display: none;
-}
 
 .features-list {
   display: flex;
@@ -265,16 +292,31 @@ body {
 
 .footer {
   background-color: var(--footer-bgd-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .logo > .studio-footer {
   color: var(--secondary-color);
 }
 
+.container > .logo {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
 .address-list {
+  margin: 0;
+  padding: 0;
+
   font-style: normal;
   line-height: 1.71;
   letter-spacing: 0.03em;
+}
+
+.address-item:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .address-link {
@@ -294,9 +336,26 @@ body {
 
 /* Фільтр */
 
+.filter-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+  margin-bottom: 50px;
+  padding-left: 0;
+}
+
+.btn-item:not(:first-child) {
+  margin-left: 8px;
+}
+
+/* .btn-item + .btn-item {
+  margin-left: 8px;
+} */
+
 .filter-btn {
+  padding: 6px 22px;
   border-radius: 4px;
-  border-color: transparent;
+  border: none;
 
   background-color: var(--secondary-bgd-color);
   color: var(--main-color);
@@ -306,7 +365,7 @@ body {
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
-  letter-spacing: inherit;
+  letter-spacing: 0.03em;
 
   cursor: pointer;
 }
@@ -323,6 +382,14 @@ body {
 }
 
 /* Проєкти */
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-item {
+
+}
 
 .project-title {
   font-weight: 700;
