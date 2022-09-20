@@ -61,7 +61,7 @@ body {
 /* Шапка */
 
 .page-header {
-  border: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
 }
 
 .navigation {
@@ -142,6 +142,8 @@ body {
 
 .hero {
   text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 
   background-color: var(--footer-bgd-color); /* Тимчасовий фон */
 }
@@ -184,10 +186,18 @@ body {
 
 /* Особливості */
 
+.features {
+  padding-bottom: 0;
+}
+
 .features-list {
   display: flex;
   margin: 0;
   padding: 0;
+}
+
+.features-list > .item {
+  width: calc(100% / 4);
 }
 
 .item + .item {
@@ -260,22 +270,26 @@ body {
   background-color: var(--main-bgd-color);
 }
 
+.team-box {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .team-img {
   display: block;
-  margin-bottom: 30px;
 }
 
 .team-name {
   margin-top: 0;
   margin-bottom: 10px;
+
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 0.03em;
 }
 
 .team-text {
-  margin-top: 0;
-  margin-bottom: 30px;
+  margin: 0;
 
   font-size: 16px;
   letter-spacing: 0.03em;
